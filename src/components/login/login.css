@@ -25,3 +25,12 @@
 .login-button-area > button {
   width: 40%;
 }
+
+.register-card {
+  height: 90%;
+  max-height: 28rem;
+  max-width: 30rem;
+  position: relative;
+  width: 90%;
+  overflow-y: auto;
+}

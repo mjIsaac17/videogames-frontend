@@ -2,15 +2,19 @@ import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
+import { useNavigate } from "react-router";
+
 import "./login.css";
 
 const LoginScreen = () => {
+  const navigate = useNavigate();
   return (
     <Form className="login-container">
       <Card className="login-card">
+        <Card.Header className="text-center">
+          <h4>Sign in to start</h4>
+        </Card.Header>
         <Card.Body>
-          <Card.Title>Sign in</Card.Title>
-
           <Form.Group>
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
@@ -22,7 +26,11 @@ const LoginScreen = () => {
         </Card.Body>
         <Card.Body>
           <div className="login-button-area">
-            <Button type="button" variant="outline-dark">
+            <Button
+              type="button"
+              variant="outline-dark"
+              onClick={() => navigate("/register")}
+            >
               Register
             </Button>
 
